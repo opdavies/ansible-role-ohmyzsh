@@ -1,0 +1,23 @@
+---
+- name: Install zsh (Debian).
+  apt:
+    name: zsh
+  when: ansible_os_family == 'Debian'
+
+- name: Clone oh-my-zsh.
+  sudo: no
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "{{ ohmyzsh_path }}"
+
+- name: Copy .zshrc
+  sudo: no
+  template:
+    src: zshrc.j2
+    dest: ~/.zshrc
+
+- name: Change shell.
+  user:
+    name: "{{ item }}"
+    shell: /bin/zsh
+  with_items: ohmyzsh_users
