@@ -1,4 +1,7 @@
 ---
+ohmyzsh_copy_zshrc: true
+ohmyzsh_change_shell: true
+
 ohmyzsh_users: []
 ohmyzsh_path: ~/.oh-my-zsh
 ohmyzsh_theme: robbyrussell

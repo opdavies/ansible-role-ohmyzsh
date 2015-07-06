@@ -15,9 +15,11 @@
   template:
     src: zshrc.j2
     dest: ~/.zshrc
+  when: ohmyzsh_copy_zshrc
 
 - name: Change shell.
   user:
     name: "{{ item }}"
     shell: /bin/zsh
   with_items: ohmyzsh_users
+  when: ohmyzsh_change_shell
