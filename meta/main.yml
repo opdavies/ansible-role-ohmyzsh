@@ -1,0 +1,8 @@
+---
+galaxy_info:
+  author: Oliver Davies
+  description: Installs and configures oh-my-zsh.
+  platforms:
+    - { name: Ubuntu, versions: all }
+    - { name: Debian, versions: all }
+  categories: [ 'system' ]
