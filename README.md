@@ -42,4 +42,4 @@ None.
 
     - hosts: all
       roles:
-        - { role: opdavies.ohmyzsh }
+        - { role: oh-my-zsh, ohmyzsh_users: [ vagrant ] }
